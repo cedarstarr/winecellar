@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>winecellar</name>
+=======
+	<name>app</name>
+>>>>>>> bc08e5d8a0ad1cbb03f72e29bc59c9215daadeec
 	<comment></comment>
 	<projects>
 	</projects>
