@@ -1,39 +1,37 @@
-Facebook/Heroku sample app -- PHP
-=================================
+# Node Cellar Sample Application with Backbone.js, Twitter Bootstrap, Node.js, Express, and MongoDB #
 
-This is a sample app showing use of the Facebook Graph API, written in PHP, designed for deployment to [Heroku](http://www.heroku.com/).
+"Node Cellar" is a sample CRUD application built with with Backbone.js, Twitter Bootstrap, Node.js, Express, and MongoDB.
 
-Run locally
------------
+The application allows you to browse through a list of wines, as well as add, update, and delete wines.
 
-Configure Apache with a `VirtualHost` that points to the location of this code checkout on your system.
+This application is further documented [here](http://coenraets.org/blog).
 
-[Create an app on Facebook](https://developers.facebook.com/apps) and set the Website URL to your local VirtualHost.
+The application is also hosted online. You can test it [here](http://nodecellar.coenraets.org).
 
-Copy the App ID and Secret from the Facebook app settings page into your `VirtualHost` config, something like:
 
-    <VirtualHost *:80>
-        DocumentRoot /Users/adam/Sites/myapp
-        ServerName myapp.localhost
-        SetEnv FACEBOOK_APP_ID 12345
-        SetEnv FACEBOOK_SECRET abcde
-    </VirtualHost>
+## To run the application on your own Heroku account:##
 
-Restart Apache, and you should be able to visit your app at its local URL.
+1. Install the [Heroku Toolbelt](http://toolbelt.heroku.com)
 
-Deploy to Heroku via Facebook integration
------------------------------------------
+2. [Sign up](http://heroku.com/signup) for a Heroku account
 
-The easiest way to deploy is to create an app on Facebook and click Cloud Services -> Get Started, then choose PHP from the dropdown.  You can then `git clone` the resulting app from Heroku.
+3. Login to Heroku from the `heroku` CLI:
 
-Deploy to Heroku directly
--------------------------
+        $ heroku login
 
-If you prefer to deploy yourself, push this code to a new Heroku app on the Cedar stack, then copy the App ID and Secret into your config vars:
+4. Create a new app on Heroku:
 
-    heroku create --stack cedar
-    git push heroku master
-    heroku config:add FACEBOOK_APP_ID=12345 FACEBOOK_SECRET=abcde
+        $ heroku create
 
-Enter the URL for your Heroku app into the Website URL section of the Facebook app settings page, hen you can visit your app on the web.
+5. Add the [MongoLab Heroku Add-on](http://addons.heroku.com/mongolab)
+
+        $ heroku addons:add mongolab
+
+6. Upload the app to Heroku:
+
+        $ git push heroku master
+
+7. Open the app in your browser:
+
+        $ heroku open
 
